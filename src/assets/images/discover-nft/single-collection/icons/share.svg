@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="74" height="74" viewBox="0 0 74 74">
+    <g data-name="Group 533">
+        <g data-name="Ellipse 28" style="fill:#fff;stroke:#d5d5d5">
+            <circle cx="37" cy="37" r="37" style="stroke:none"/>
+            <circle cx="37" cy="37" r="36.5" style="fill:none"/>
+        </g>
+        <path data-name="Icon metro-share" d="M28.6 23.136a4.8 4.8 0 0 0-3.465 1.471L12.15 18.115a4.823 4.823 0 0 0 0-1.526L25.134 10.1a4.819 4.819 0 1 0-1.355-3.349 4.854 4.854 0 0 0 .061.763L10.856 14a4.82 4.82 0 1 0 0 6.7l12.984 6.494a4.82 4.82 0 1 0 4.76-4.058z" transform="translate(19.429 20.072)" style="fill:#363637"/>
+    </g>
+</svg>

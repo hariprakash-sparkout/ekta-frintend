@@ -1,0 +1,731 @@
+<section class="single-collection__bg--banner relative">
+    <app-navbar class="absolute w-full"></app-navbar>
+    <div class="grid grid-cols-12 items-center h-full gap-4 lg:gap-8 p-4 lg:p-24">
+        <div class="col-span-12">
+            <div class="banner__content h-96">
+                <!-- <h2 class="text-3xl xl:text-6xl fw-medium text-white">Own a Piece of
+                Poker History With party poker</h2>
+                <button class="btn btn--red mt-12">Discover NFT</button> -->
+            </div>
+            <div class="w-full bg-white -mt-80 lg:-mt-96 rounded-3xl overflow-hidden p-4 pt-6 lg:pt-8 lg:p-8">
+                <div class="grid grid-cols-12 items-center gap-4 mb-8">
+                    <div class="col-span-12 lg:col-span-5">
+                        <img src="assets/images/discover-nft/single-collection/details/1.png" alt="">
+                    </div>
+                    <div class="col-span-12 lg:col-span-7 lg:px-6">
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-wrap gap-4 items-center ">
+                                <div>
+                                    <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                                    <img src="assets/images/discover-nft/explore-collection/community.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Community</span> </button>
+                                </div>
+                                <div>
+                                    <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                                    <img src="assets/images/discover-nft/explore-collection/reward.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Reward</span>  </button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 justify-end">
+                                <img src="assets/icons/share.svg" class="w-10 h-10" alt="">
+                                <img src="assets/icons/menu.svg" class="w-6 h-6" alt="">
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <h3 class="text-2xl lg:text-4xl text-black fw-semibold pb-2">Bean #911</h3>
+                            <h4 class="text-base lg:text-xl text-green fw-semibold">BEANZ Official</h4>
+                            <p class="text-black text-sm lg:text-lg line-clamp-2 py-3">Owned by <span class="text-green fw-semibold"> rage.eth</span> </p>
+                        </div>
+                        
+                        <div class="my-4 border border-solid border-grey rounded-xl">
+                            <h6 class="text-sm text-grey fw-medium p-4 pb-0">Sales Ends</h6>
+                            <div class="flex flex-wrap items-center gap-4 px-4">   
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-black text-xl fw-medium">02</h4>
+                                    <p class="text-grey text-sm fw-regular">Days</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-black text-xl fw-medium">18</h4>
+                                    <p class="text-grey text-sm fw-regular">Hours</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-black text-xl fw-medium">51</h4>
+                                    <p class="text-grey text-sm fw-regular">Mins</p>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <h4 class="text-black text-xl fw-medium">31</h4>
+                                    <p class="text-grey text-sm fw-regular">Secs</p>
+                                </div>
+                            </div>
+                            <hr class="border-grey border-t border-solid my-4">
+                            <h5 class="text-sm text-grey fw-medium pb-1 px-4">Price</h5>
+                            <div class="flex items-center gap-2 p-4 pt-0">
+                                <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                <p class="text-xl text-black fw-medium">28 EKTA <span class="text-sm text-grey fw-medium">($247,234.05)</span></p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row items-center gap-4 py-4">
+                            <button type="button" class="px-12 py-3 w-full md:w-auto btn btn--red">Buy Now</button>
+                            <button type="button" class="px-12 py-3 w-full md:w-auto btn btn--red-outline">Make Offer</button>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="grid grid-cols-12 gap-4 lg:gap-8 my-8">
+                    <div class="col-span-12 lg:col-span-6">
+                        <div class="border rounded-xl border-solid border-light-grey">
+                            <div class="flex items-center justify-between p-4 py-5">
+                                <div class="flex justify-between items-center gap-4">
+                                    <img src="assets/icons/listing.svg" class="w-5 h-5 lg:w-7 lg:h-7" alt="">
+                                    <h3 class="text-lg lg:text-xl text-black fw-semibold">Listing</h3>
+                                </div>
+                                <button (click)="toggleListing()" type="button">
+                                    <img *ngIf="isListingArrowCollapsed != true" src="assets/images/discover-nft/single-collection/chevron-down.svg" class="w-6 h-6" alt="">
+                                    <img *ngIf="isListingArrowCollapsed != false" src="assets/images/discover-nft/single-collection/chevron-up.svg" class="w-6 h-6" alt="">    
+                                </button>
+                            </div>
+                            <div [ngClass]="{'hidden': !isListingCollapsed, 'block': isListingCollapsed}" class="">
+                                <div class="relative overflow-x-auto">
+                                    <table class="w-full text-sm text-left">
+                                       <thead class="text-sm text-black fw-semibold capitalize bg-light-white">
+                                          <tr>
+                                             <th scope="col" class="px-6 py-3 font-normal">
+                                                Price
+                                             </th>
+                                             <th scope="col" class="px-6 py-3 font-normal">
+                                                USD Price
+                                             </th>
+                                             <th scope="col" class="px-6 py-3 font-normal">
+                                                Expiration
+                                             </th>
+                                             <th scope="col" class="px-6 py-3 font-normal">
+                                                Form
+                                             </th>
+                                             <th scope="col" class="px-6 py-3 font-normal">
+                                                <span class="sr-only">Edit</span>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                          <tr class="border-b border-grey">
+                                             <th scope="row" class="p-4 px-6 whitespace-nowrap">
+                                                <div class="flex items-center gap-2">
+                                                    <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                                    <p class="text-sm text-black fw-regular">105 EKTA </p>
+                                                </div>
+                                             </th>
+                                             <td class="p-4">
+                                                <span class="text-sm text-black fw-regular">($247,234.05)</span>
+                                             </td>
+                                             <td class="p-4">
+                                                <p class="text-black text-sm fw-regular">9 Days</p>
+                                             </td>
+                                             <td class="p-4">
+                                                <span class="text-green fw-semibold text-sm"> rage.eth</span>
+                                             </td>
+                                             <td class="p-4 text-right">
+                                                <a href="#">
+                                                    <button type="button" class="px-5 py-1 text-xs fw-medium rounded-full btn--red-outline">Buy</button>
+                                                </a>
+                                             </td>
+                                          </tr>
+                                          <tr class="">
+                                            <th scope="row" class="p-4 px-6 whitespace-nowrap">
+                                               <div class="flex items-center gap-2">
+                                                   <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                                   <p class="text-sm text-black fw-regular">105 EKTA </p>
+                                               </div>
+                                            </th>
+                                            <td class="p-4">
+                                               <span class="text-sm text-black fw-regular">($247,234.05)</span>
+                                            </td>
+                                            <td class="p-4">
+                                               <p class="text-black text-sm fw-regular">9 Days</p>
+                                            </td>
+                                            <td class="p-4">
+                                               <span class="text-green fw-semibold text-sm"> rage.eth</span>
+                                            </td>
+                                            <td class="p-4 text-right">
+                                               <a href="#">
+                                                   <button type="button" class="px-5 py-1 text-xs fw-medium rounded-full btn--red-outline">Buy</button>
+                                               </a>
+                                            </td>
+                                         </tr>
+                                         
+                                       </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-span-12 lg:col-span-6">
+                        <div class="border rounded-xl border-solid border-light-grey">
+                            <div class="flex items-center justify-between p-4 py-5">
+                                <div class="flex justify-between items-center gap-4">
+                                    <img src="assets/icons/pricing-history.svg" class="w-5 h-5 lg:w-7 lg:h-7" alt="">
+                                    <h3 class="text-lg lg:text-xl text-black fw-semibold">Pricing History</h3>
+                                </div>
+                                
+                            </div>
+                            <div class="flex flex-col md:flex-row gap-4 justify-between p-4 lg:p-6">
+                                <div>
+                                    <button class="flex justify-between gap-x-4 w-full md:w-40 items-center border border-light-grey rounded-full border-solid text-black text-base fw-regular px-4 lg:px-5 py-2">
+                                     <span>All Time</span>  
+                                     <img src="assets/icons/chevron-down.svg" class="w-4 h-4" alt=""> 
+                                    </button>
+                                </div>
+                                <div>
+                                    <h4 class="text-sm fw-regular text-black pb-2">All Time Avg. Price</h4>
+                                    <div class="flex items-center gap-x-2">
+                                        <img src="assets/images/trending-nft/ekta-coin.svg" alt="" class="w-5 h-5">
+                                        <span class="text-md text-black fw-medium">1.699 EKTA</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="grid grid-cols-12 items-center gap-4 lg:gap-8 my-4">
+                    <div class="col-span-12 lg:col-span-6">
+                        <div class="border rounded-xl border-solid border-light-grey">
+                            <div class="flex items-center justify-between p-4 py-5">
+                                <div class="flex justify-between items-center gap-4">
+                                    <img src="assets/icons/offers.svg" class="w-5 h-5 lg:w-7 lg:h-7" alt="">
+                                    <h3 class="text-lg lg:text-xl text-black fw-semibold">Offers</h3>
+                                </div>
+                                <button (click)="toggleOffers()" type="button">
+                                    <img *ngIf="isOffersCollapsed != true" src="assets/images/discover-nft/single-collection/chevron-down.svg" class="w-6 h-6" alt="">
+                                    <img *ngIf="isOffersCollapsed != false" src="assets/images/discover-nft/single-collection/chevron-up.svg" class="w-6 h-6" alt="">    
+                                </button>
+                            </div>
+                            <div [ngClass]="{'hidden': !isOffersCollapsed, 'block': isOffersCollapsed}" class="">
+                                <div class="relative overflow-x-auto">
+                                    <table class="w-full text-sm text-left">
+                                       <thead class="text-sm text-black fw-semibold capitalize bg-light-white">
+                                          <tr>
+                                             <th scope="col" class="px-6 py-3 font-normal">
+                                                Price
+                                             </th>
+                                             <th scope="col" class="px-6 py-3 font-normal">
+                                                USD Price
+                                             </th>
+                                             <th scope="col" class="px-6 py-3 font-normal">
+                                                Floor Difference
+                                             </th>
+                                             <th scope="col" class="px-6 py-3 font-normal">
+                                                Expiration
+                                             </th>
+                                             <th scope="col" class="px-6 py-3 font-normal">
+                                                Form
+                                             </th>
+                                             <th scope="col" class="px-6 py-3 font-normal">
+                                                <span class="sr-only">Edit</span>
+                                             </th>
+                                          </tr>
+                                       </thead>
+                                       <tbody>
+                                            <tr class="border-b border-grey">
+                                                <th scope="row" class="p-4 px-6 whitespace-nowrap">
+                                                    <div class="flex items-center gap-2">
+                                                        <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                                        <p class="text-sm text-black fw-regular">105 EKTA </p>
+                                                    </div>
+                                                </th>
+                                                <td class="p-4">
+                                                    <span class="text-sm text-black fw-regular">($247,234.05)</span>
+                                                </td>
+                                                <td class="p-4">
+                                                    <p class="text-black text-sm fw-regular">9 Days</p>
+                                                </td>
+                                                <td class="p-4">
+                                                    <p class="text-black text-sm fw-regular">279% Above</p>
+                                                </td>
+                                                <td class="p-4">
+                                                    <p class="text-black text-sm fw-regular">About 6 hrs</p>
+                                                </td>
+                                                <td class="p-4">
+                                                    <span class="text-green fw-semibold text-sm"> AAA Bulls</span>
+                                                </td>
+                                                
+                                            </tr>
+                                            <tr class="border-b border-grey">
+                                                <th scope="row" class="p-4 px-6 whitespace-nowrap">
+                                                    <div class="flex items-center gap-2">
+                                                        <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                                        <p class="text-sm text-black fw-regular">105 EKTA </p>
+                                                    </div>
+                                                </th>
+                                                <td class="p-4">
+                                                    <span class="text-sm text-black fw-regular">($247,234.05)</span>
+                                                </td>
+                                                <td class="p-4">
+                                                    <p class="text-black text-sm fw-regular">9 Days</p>
+                                                </td>
+                                                <td class="p-4">
+                                                    <p class="text-black text-sm fw-regular">163% Above</p>
+                                                </td>
+                                                <td class="p-4">
+                                                    <p class="text-black text-sm fw-regular">2 Days</p>
+                                                </td>
+                                                <td class="p-4">
+                                                    <span class="text-green fw-semibold text-sm"> Vit1</span>
+                                                </td>
+                                                
+                                            </tr>
+                                            <tr>
+                                                <th scope="row" class="p-4 px-6 whitespace-nowrap">
+                                                    <div class="flex items-center gap-2">
+                                                        <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                                        <p class="text-sm text-black fw-regular">105 EKTA </p>
+                                                    </div>
+                                                </th>
+                                                <td class="p-4">
+                                                    <span class="text-sm text-black fw-regular">($247,234.05)</span>
+                                                </td>
+                                                <td class="p-4">
+                                                    <p class="text-black text-sm fw-regular">9 Days</p>
+                                                </td>
+                                                <td class="p-4">
+                                                    <p class="text-black text-sm fw-regular">163% Above</p>
+                                                </td>
+                                                <td class="p-4">
+                                                    <p class="text-black text-sm fw-regular">2 Days</p>
+                                                </td>
+                                                <td class="p-4">
+                                                    <span class="text-green fw-semibold text-sm"> theblackoreo</span>
+                                                </td>
+                                                
+                                            </tr>
+                                         
+                                         
+                                       </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-12 items-center gap-4 lg:gap-8 my-8">
+                    <div class="col-span-12 lg:col-span-6">
+                        <div class="border rounded-xl border-solid border-light-grey">
+                            <div class="flex items-center justify-between p-4 py-5">
+                               
+                                <div class="flex justify-between items-center gap-4">
+                                    <img src="assets/icons/user-plus-black.svg" class="w-5 h-5 lg:w-7 lg:h-7" alt="">
+                                    <h3 class="text-lg lg:text-xl text-black fw-semibold">Attributes</h3>
+                                </div>
+                                <button (click)="toggleAttributes()" type="button">
+                                    <img *ngIf="isAttributesCollapsed != true" src="assets/images/discover-nft/single-collection/chevron-down.svg" class="w-6 h-6" alt="">
+                                    <img *ngIf="isAttributesCollapsed != false" src="assets/images/discover-nft/single-collection/chevron-up.svg" class="w-6 h-6" alt="">    
+                                </button>
+                            </div>
+                            <div [ngClass]="{'hidden': !isAttributesCollapsed, 'block': isAttributesCollapsed}" class="">
+                                <div class="relative overflow-x-auto">
+                                    <div class="grid grid-cols-12 gap-4 p-4">
+                                        <div class="col-span-12 lg:col-span-4 p-4 bg-light-white border rounded-lg border-light-grey border-solid">
+                                            <p class="text-sm text-black fw-regular">Background</p>
+                                            <h4 class="text-green text-xl fw-medium truncate">Off White C</h4>
+                                        </div>
+                                        <div class="col-span-12 lg:col-span-4 p-4 bg-light-white border rounded-lg border-light-grey border-solid">
+                                            <p class="text-sm text-black fw-regular">Eyes</p>
+                                            <h4 class="text-green text-xl fw-medium truncate">Spirits - Dots</h4>
+                                        </div>
+                                        <div class="col-span-12 lg:col-span-4 p-4 bg-light-white border rounded-lg border-light-grey border-solid">
+                                            <p class="text-sm text-black fw-regular">Mouth</p>
+                                            <h4 class="text-green text-xl fw-medium truncate">Spirit - C</h4>
+                                        </div>
+                                        <div class="col-span-12 lg:col-span-4 p-4 bg-light-white border rounded-lg border-light-grey border-solid">
+                                            <p class="text-sm text-black fw-regular">Offhand</p>
+                                            <h4 class="text-green text-xl fw-medium truncate">Cocktail um</h4>
+                                        </div>
+                                        <div class="col-span-12 lg:col-span-4 p-4 bg-light-white border rounded-lg border-light-grey border-solid">
+                                            <p class="text-sm text-black fw-regular">Special</p>
+                                            <h4 class="text-green text-xl fw-medium truncate">Flying Cloud</h4>
+                                        </div>
+                                        <div class="col-span-12 lg:col-span-4 p-4 bg-light-white border rounded-lg border-light-grey border-solid">
+                                            <p class="text-sm text-black fw-regular">Type</p>
+                                            <h4 class="text-green text-xl fw-medium truncate">Water Bean</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-12 items-center gap-4 lg:gap-8 my-8">
+                    <div class="col-span-12">
+                        <div class="border rounded-xl border-solid border-light-grey">
+                            <div class="flex items-center justify-between p-4 py-5">
+                                <div class="flex justify-between items-center gap-4">
+                                    <img src="assets/icons/information.svg" class="w-5 h-5 lg:w-7 lg:h-7" alt="">
+                                    <h3 class="text-lg lg:text-xl text-black fw-semibold">Information</h3>
+                                </div>
+                                <button (click)="toggleInformation()" type="button">
+                                    <img *ngIf="isInformationCollapsed != true" src="assets/images/discover-nft/single-collection/chevron-down.svg" class="w-6 h-6" alt="">
+                                    <img *ngIf="isInformationCollapsed != false" src="assets/images/discover-nft/single-collection/chevron-up.svg" class="w-6 h-6" alt="">    
+                                </button>
+                            </div>
+                            <div [ngClass]="{'hidden': !isInformationCollapsed, 'block': isInformationCollapsed}" class="">
+                                <div class="relative overflow-x-auto">
+                                    <table class="w-full text-sm text-left">
+                                    
+                                        <tbody>
+                                        <tr class="border-b border-grey">
+                                            <th scope="row" class="p-4 w-5/12 whitespace-nowrap">
+                                                <div>
+                                                    <p class="text-sm text-black fw-regular">Contract Address</p>
+                                                    <p class="text-base text-green fw-regular pt-1">0xd45058Bf25BBD8F586124C479D384c8C708CE23A</p>
+                                                </div>
+                                            </th>
+                                            <td class="p-4">
+                                                <div>
+                                                    <p class="text-sm text-black fw-regular">Token ID</p>
+                                                    <p class="text-base text-green fw-regular pt-1">19343</p>
+                                                </div>
+                                            </td>
+                                            <td class="p-4">
+                                                <div>
+                                                    <p class="text-sm text-black fw-regular">Token Standard</p>
+                                                    <p class="text-base text-green fw-regular pt-1">ERC-1155</p>
+                                                </div>
+                                            </td>
+                                            <td class="p-4">
+                                                <div>
+                                                    <p class="text-sm text-black fw-regular">Creator Fees</p>
+                                                    <p class="text-base text-green fw-regular pt-1">5%</p>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-12 items-center gap-4 lg:gap-8 my-8">
+                    <div class="col-span-12">
+                        <div class="col-span-12 lg:col-span-6">
+                            <div class="border rounded-xl border-solid border-light-grey">
+                                <div class="flex items-center justify-between p-4 py-5">
+                                    <div class="flex justify-between items-center gap-4">
+                                        <img src="assets/icons/item-activity.svg" class="w-5 h-5 lg:w-7 lg:h-7" alt="">
+                                        <h3 class="text-lg lg:text-xl text-black fw-semibold">Item Activity</h3>
+                                    </div>
+                                    <div>
+                                        <button class="flex gap-x-2 items-center border border-light-grey rounded-full border-solid text-black text-base fw-regular px-4 lg:px-6 py-2">
+                                        <img src="assets/icons/filter.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Filter</span>  </button>
+                                    </div>
+                                </div>
+                                <!-- <div class=""> -->
+                                    <div class="relative overflow-x-auto">
+                                        <table class="w-full text-sm text-left">
+                                           <thead class="text-sm text-black fw-regular capitalize bg-light-white">
+                                              <tr>
+                                                 <th scope="col" class="px-6 py-3 font-normal">
+                                                   Event
+                                                 </th>
+                                                 <th scope="col" class="px-6 py-3 font-normal">
+                                                    Price
+                                                 </th>
+                                                 <th scope="col" class="px-6 py-3 font-normal">
+                                                    From
+                                                 </th>
+                                                 <th scope="col" class="px-6 py-3 font-normal">
+                                                   To
+                                                 </th>
+                                                 <th scope="col" class="px-6 py-3 font-normal">
+                                                   Date
+                                                 </th>
+                                                 
+                                              </tr>
+                                           </thead>
+                                           <tbody>
+                                                <tr class="border-b border-grey">
+                                                    <th scope="row" class="p-6 whitespace-nowrap">
+                                                        <div class="flex items-center gap-4">
+                                                            <img src="assets/icons/transfer.svg" class="w-5 h-5" alt="">
+                                                            <p class="text-base text-black fw-regular tracking-wider">Transfer </p>
+                                                        </div>
+                                                    </th>
+                                                    <td class="p-6">
+                                                        <span class="text-base text-black fw-regular tracking-wider"></span>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <p class="text-green fw-semibold text-base">gre8ape</p>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <p class="text-green fw-semibold text-base">72CD97</p>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <p class="text-green fw-semibold text-base">3 months ago</p>
+                                                    </td>
+                                                   
+                                                    
+                                                </tr>
+                                                <tr class="border-b border-grey">
+                                                    <th scope="row" class="p-6 whitespace-nowrap">
+                                                        <div class="flex items-center gap-4">
+                                                            <img src="assets/icons/shopping-cart.svg" class="w-5 h-5" alt="">
+                                                            <p class="text-base text-black fw-regular tracking-wider">Sale </p>
+                                                        </div>
+                                                    </th>
+                                                    <td class="p-6">
+                                                        <div class="flex items-center gap-4">
+                                                            <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                                            <p class="text-base text-black fw-medium">4.99 EKTA</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <p class="text-green fw-semibold text-base">JO-MO</p>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <p class="text-green fw-semibold text-base">boredhodler</p>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <p class="text-green fw-semibold text-base">8 months ago</p>
+                                                    </td>
+                                                </tr>
+                                               
+                                                <tr class="border-b border-grey">
+                                                    <th scope="row" class="p-6 whitespace-nowrap">
+                                                        <div class="flex items-center gap-4">
+                                                            <img src="assets/icons/mouse-pointer.svg" class="w-5 h-5" alt="">
+                                                            <p class="text-base text-black fw-regular tracking-wider">Bid </p>
+                                                        </div>
+                                                    </th>
+                                                    <td class="p-6">
+                                                        <div class="flex items-center gap-4">
+                                                            <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                                            <p class="text-base text-black fw-medium">20,2650 EKTA</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <p class="text-green fw-semibold text-base"></p>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <p class="text-green fw-semibold text-base">DBFBE8</p>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <p class="text-green fw-semibold text-base">11 months ago</p>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="p-6 whitespace-nowrap">
+                                                        <div class="flex items-center gap-4">
+                                                            <img src="assets/icons/listing.svg" class="w-5 h-5" alt="">
+                                                            <p class="text-base text-black fw-regular tracking-wider">Listing </p>
+                                                        </div>
+                                                    </th>
+                                                    <td class="p-6">
+                                                        <div class="flex items-center gap-4">
+                                                            <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                                            <p class="text-base text-black fw-medium">155 EKTA</p>
+                                                        </div>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <p class="text-green fw-semibold text-base">72CD97</p>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <p class="text-green fw-semibold text-base"></p>
+                                                    </td>
+                                                    <td class="p-6">
+                                                        <p class="text-green fw-semibold text-base">1 Year ago</p>
+                                                    </td>
+                                                </tr>
+                                             
+                                             
+                                           </tbody>
+                                        </table>
+                                    </div>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-12 items-center gap-4 lg:gap-8 my-8">
+                    <div class="col-span-12">
+                        <div class="col-span-12 lg:col-span-6">
+                            <div class="border rounded-xl border-solid border-light-grey">
+                                <div class="flex items-center justify-between p-4 py-5">
+                                    <div class="flex justify-between items-center gap-4">
+                                        <img src="assets/icons/users.svg" class="w-5 h-5 lg:w-7 lg:h-7" alt="">
+                                        <h3 class="text-lg lg:text-xl text-black fw-semibold">About</h3>
+                                    </div>
+                                    <button (click)="toggleAbout()" type="button">
+                                        <img *ngIf="isAboutCollapsed != true" src="assets/images/discover-nft/single-collection/chevron-down.svg" class="w-6 h-6" alt="">
+                                        <img *ngIf="isAboutCollapsed != false" src="assets/images/discover-nft/single-collection/chevron-up.svg" class="w-6 h-6" alt="">    
+                                    </button>
+                                </div>
+                                <div [ngClass]="{'hidden': !isAboutCollapsed, 'block': isAboutCollapsed}" class="">
+                                    <div class="relative overflow-x-auto p-4 pt-0">
+                                        <p class="fw-regular text-black text-sm lg:text-lg">BEANZ are a small species that sprouts from the dirt in the garden. They make for a great sidekick to an Azuki, although
+                                            some like to kick it alone. They're earnestly driven by the desire to help. However, certain BEANZ feel a calling to pave
+                                            their own path...</p>
+                                            <div class="flex items-center my-4 gap-4">
+                                                <img src="assets/icons/link.svg" class="w-10 h-10" alt="">
+                                                <img src="assets/icons/discord.svg" class="w-10 h-10" alt="">
+                                                <img src="assets/icons/insta.svg" class="w-10 h-10" alt="">
+                                                <img src="assets/icons/twitter.svg" class="w-10 h-10" alt="">
+                                           </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-12 items-center mb-6 gap-4 lg:gap-8">
+                    <div class="col-span-12 lg:col-span-8">
+                        
+                        <h2 class="title line-clamp-3">More From this Collections</h2>
+                    </div>
+                    <div class="col-span-12 lg:col-span-4">
+                        <a href="#">
+                            <button type="button" class="btn w-full lg:w-auto btn--red float-right">View Collections</button>
+                        </a>
+                    </div>
+                </div>
+                <div class="grid grid-cols-12 items-strech gap-4 gap-y-8 lg:gap-y-0 lg:gap-8">
+                    <div class="col-span-12 md:col-span-6 lg:col-span-3">
+                        <a href="/single-collection-details">
+                            <img src="assets/images/discover-nft/single-collection/beanz-avatars/1.png" width="100%" height="100%" alt="">
+                            <div class="nft__card--info">
+                                <div class="p-5">
+                                    <h4 class="nft__card--sub-title">BEANZ Official</h4>
+                                    <h3 class="nft__card--title">Bean #911</h3>
+                                </div>
+                                <hr class="border-grey border-t border-solid">
+                                <div class="grid grid-cols-12 items-center gap-x-3 p-5 h-32">
+                                    <div class="col-span-6">
+                                        <h5 class="nft__card--category">Top Bid</h5>
+                                        <div class="flex items-center space-x-2">
+                                            <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                            <span class="nft__card--ekta-value-lg">1.617 EKTA</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-6">
+                                        <button type="button" class="nft__card--red-btn">Buy Now</button>
+                                    </div>
+                                    <div class="col-span-12">
+                                        <div class="flex items-center space-x-2">
+                                            <h5 class="text-sm text-black fw-regular">Last</h5>
+                                            <div class="flex items-center space-x-2">
+                                                <img src="assets/images/trending-nft/ekta-coin.svg" class="w-5 h-5" alt="">
+                                                <span class="nft__card-ekta-value-sm">2.911 EKTA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-span-12 md:col-span-6 lg:col-span-3">
+                        <a href="/single-collection-details">
+                            <img src="assets/images/discover-nft/single-collection/beanz-avatars/2.png" width="100%" height="100%" alt="">
+                            <div class="nft__card--info">
+                                <div class="p-5">
+                                    <h4 class="nft__card--sub-title">BEANZ Official</h4>
+                                    <h3 class="nft__card--title">Bean #911</h3>
+                                </div>
+                                <hr class="border-grey border-t border-solid">
+                                <div class="grid grid-cols-12 items-center gap-x-3 p-5 h-32">
+                                    <div class="col-span-6">
+                                        <h5 class="nft__card--category">Top Bid</h5>
+                                        <div class="flex items-center space-x-2">
+                                            <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                            <span class="nft__card--ekta-value-lg">1.617 EKTA</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-6">
+                                        <button type="button" class="nft__card--mint-btn">Mint Now</button>
+                                    </div>
+                                    <div class="col-span-12">
+                                        <div class="flex items-center space-x-2">
+                                            <h5 class="text-sm text-black fw-regular">Last</h5>
+                                            <div class="flex items-center space-x-2">
+                                                <img src="assets/images/trending-nft/ekta-coin.svg" class="w-5 h-5" alt="">
+                                                <span class="nft__card-ekta-value-sm">2.911 EKTA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-span-12 md:col-span-6 lg:col-span-3">
+                        <a href="/single-collection-details">
+                            <img src="assets/images/discover-nft/single-collection/beanz-avatars/3.png" width="100%" height="100%" alt="">
+                            <div class="nft__card--info">
+                                <div class="p-5">
+                                    <h4 class="nft__card--sub-title">BEANZ Official</h4>
+                                    <h3 class="nft__card--title">Bean #911</h3>
+                                </div>
+                                <hr class="border-grey border-t border-solid">
+                                <div class="grid grid-cols-12 items-center gap-x-3 p-5 h-32">
+                                    <div class="col-span-6">
+                                        <h5 class="nft__card--category">Best Offer</h5>
+                                        <div class="flex items-center space-x-2">
+                                            <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                            <span class="nft__card--ekta-value-lg">1.617 EKTA</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-6">
+                                        <button type="button" class="nft__card--red-btn">Buy Now</button>
+                                    </div>
+                                    <div class="col-span-12">
+                                        <div class="flex items-center space-x-2">
+                                            <h5 class="text-sm text-black fw-regular">Last</h5>
+                                            <div class="flex items-center space-x-2">
+                                                <img src="assets/images/trending-nft/ekta-coin.svg" class="w-5 h-5" alt="">
+                                                <span class="nft__card-ekta-value-sm">2.911 EKTA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-span-12 md:col-span-6 lg:col-span-3">
+                        <a href="/single-collection-details">
+                            <img src="assets/images/discover-nft/single-collection/beanz-avatars/4.png" width="100%" height="100%" alt="">
+                            <div class="nft__card--info">
+                                <div class="p-5">
+                                    <h4 class="nft__card--sub-title">BEANZ Official</h4>
+                                    <h3 class="nft__card--title">Bean #911</h3>
+                                </div>
+                                <hr class="border-grey border-t border-solid">
+                                <div class="grid grid-cols-12 items-center gap-x-3 p-5 h-32">
+                                    <div class="col-span-6">
+                                        <h5 class="nft__card--category">Price</h5>
+                                        <div class="flex items-center space-x-2">
+                                            <img src="assets/images/trending-nft/ekta-coin.svg" class="w-6 h-6" alt="">
+                                            <span class="nft__card--ekta-value-lg">1.617 EKTA</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-span-6">
+                                        <button type="button" class="nft__card--red-btn">Buy Now</button>
+                                    </div>
+                                    <div class="col-span-12">
+                                        <div class="flex items-center space-x-2">
+                                            <h5 class="text-sm text-black fw-regular">Last</h5>
+                                            <div class="flex items-center space-x-2">
+                                                <img src="assets/images/trending-nft/ekta-coin.svg" class="w-5 h-5" alt="">
+                                                <span class="nft__card-ekta-value-sm">2.911 EKTA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+
+       
+    </div>
+    <app-footer></app-footer>
+</section>

@@ -1,0 +1,540 @@
+<app-dn-banner></app-dn-banner>
+
+<div class="max-w-7xl mx-auto p-12 lg:py-24">
+    <div class="grid grid-cols-12 items-center mb-4 gap-4 lg:gap-8">
+        <div class="col-span-12 md:col-span-8">
+           <div class="relative">
+            <img class="float-right absolute hidden lg:block -mt-72 right-0 -z-1" width="250" height="100%" src="assets/images/discover-nft/explore-collection/abstract-rectangle.png" alt="">
+            <h2 class="title my-0">Explore collections</h2>
+           </div>
+        </div>
+        <div class="col-span-12 md:col-span-4 mb-8 lg:mb-0">
+            <div class="flex items-center w-full bg-white border border-light-grey rounded-full focus:bg-transparent text-sm  text-black py-1 px-6">
+                <img src="assets/images/discover-nft/explore-collection/search.svg" class="w-5 h-5 md:w-4 md:h-4" alt="">
+                <input type="text" id="footer-field" placeholder="Search by Collection name " name="footer-input" class="pl-4 fw-regular focus:outline-none outline-none text-base leading-8 transition-colors duration-200 ease-in-out">    
+            </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-12 items-center lg:mb-8 gap-6 lg:gap-8">
+        <div class="col-span-12">
+            <div>
+                <ul class="flex flex-wrap items-center justify-center lg:justify-start gap-4 lg:gap-5 -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                    <li class="mr-2" role="presentation">
+                        <button class="flex gap-x-4 items-center border border-light-grey rounded-full border-solid text-black text-base fw-regular px-4 lg:px-8 py-2" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="true">
+                        <img src="assets/images/discover-nft/explore-collection/partners.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Partner</span> </button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button class="flex gap-x-4 items-center border border-light-grey rounded-full border-solid text-black text-base fw-regular px-4 lg:px-8 py-2" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="false">
+                        <img src="assets/images/discover-nft/explore-collection/status.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Status</span>  </button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button class="flex gap-x-4 items-center border border-light-grey rounded-full border-solid text-black text-base fw-regular px-4 lg:px-8 py-2" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">
+                        <img src="assets/images/discover-nft/explore-collection/category.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Categories</span></button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button class="flex gap-x-4 items-center border border-light-grey rounded-full border-solid text-black text-base fw-regular px-4 lg:px-8 py-2" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">
+                        <img src="assets/images/discover-nft/explore-collection/features.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Features</span></button>
+                    </li>
+                </ul>
+            </div>
+            <!-- <div id="myTabContent">
+                <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Profile tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                </div>
+                <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                </div>
+                <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+                <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <img class="float-right absolute hidden lg:block left-0 mt-80 -z-1" width="100" height="100%" src="assets/images/discover-nft/explore-collection/triangle-left.png" alt="">
+            
+    <div class="grid grid-cols-12 mt-6 lg:mt-12 gap-4 lg:gap-12">
+        
+        <div class="col-span-12 sm:col-span-6 lg:col-span-4 border-light-grey border border-solid rounded-2xl">
+            <a  [routerLink]="['/discover-nft','single-collection']">
+                <div class="explore-collection__card relative h-full flex flex-col">
+                    <img src="assets/images/discover-nft/explore-collection/beanz.png" alt="">
+                    <!-- <div class="explore-collection__card-info p-6"> -->
+                        <div class="flex justify-between mb-4 px-6 pt-6">  
+                            <img class="border-white border-3 rounded-lg border-solid w-24 h-24 -mt-16" src="assets/images/discover-nft/explore-collection/beanz-avatar.png" alt="ekta-nft" />
+                            <button class="flex gap-x-2 bg-pale-white items-center rounded-full border-solid text-black text-base fw-regular px-4 py-1">
+                                <span class="fw-regular text-black text-xs hidden lg:block">Floor Price</span>  
+                                <img src="assets/images/discover-nft/explore-collection/ekta-coin.svg" class="w-5 h-5 border-solid rounded-md border-2 border-white" alt=""> 
+                                <span class="text-black text-xs fw-medium">15.3 EKTA</span>
+                            </button>
+                            <img src="assets/images/discover-nft/explore-collection/menu.svg" class="" alt="">
+                        </div>
+                        <h4 class="card__title line-clamp-1 px-6">BEANZ Official</h4>
+                        <div class="flex flex-wrap gap-x-2 items-center px-6">
+                            <p class="fw-medium text-black text-base">Art</p> | <p class="text-black text-base line-clamp-2">by <span class="text-green fw-medium">TeamAzuki</span> </p>
+                        </div>
+                        <p class="text-black text-base fw-regular line-clamp-2 px-6 my-4">BEANZ are a small species that sprouts from the
+                            dirt in the garden. They make for a</p>
+                        <div class="flex space-x-4 items-center px-6">
+                            <div>
+                                <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                                <img src="assets/images/discover-nft/explore-collection/community.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Community</span> </button>
+                            </div>
+                            <div>
+                                <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                                <img src="assets/images/discover-nft/explore-collection/reward.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Reward</span>  </button>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 mt-auto">
+                            <a href="#">
+                                <button type="button" class="btn btn--red mt-6">View Collections</button>
+                            </a>
+                        </div>
+                        
+                    <!-- </div> -->
+                </div>
+            </a>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-4 border-light-grey border border-solid rounded-2xl">
+            <div class="explore-collection__card relative h-full flex flex-col">
+                <img src="assets/images/discover-nft/explore-collection/pxn.png" alt="">
+                <!-- <div class="explore-collection__card-info p-6"> -->
+                    <div class="flex justify-between mb-4 pt-6 px-6">  
+                        <img class="border-white border-3 rounded-lg border-solid w-24 h-24 -mt-16" src="assets/images/discover-nft/explore-collection/pxn-avatar.png" alt="ekta-nft" />
+                        <button class="flex gap-x-2 bg-pale-white items-center rounded-full border-solid text-black text-base fw-regular px-4 py-1">
+                            <span class="fw-regular text-black text-xs hidden lg:block">Floor Price</span>  
+                            <img src="assets/images/discover-nft/explore-collection/ekta-coin.svg" class="w-5 h-5 border-solid rounded-md border-2 border-white" alt=""> 
+                            <span class="text-black text-xs fw-medium">15.3 EKTA</span>
+                        </button>
+                        <img src="assets/images/discover-nft/explore-collection/menu.svg" class="" alt="">
+                    </div>
+                    <h4 class="card__title line-clamp-1 px-6">PXN: Ghost Division</h4>
+                    <div class="flex flex-wrap gap-x-2 items-center px-6">
+                        <p class="fw-medium text-black text-base">Game</p> | <p class="text-black text-base line-clamp-2">by <span class="text-green fw-medium">PhantomNetwork</span> </p>
+                    </div>
+                    <p class="text-black text-base fw-regular line-clamp-2 my-4 px-6">The underbelly of Web3. A shadow vague, formless,
+                        but eternal.</p>
+                    <div class="flex space-x-4 items-center px-6">
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/asset.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Asset</span> </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/utility.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Utility</span>  </button>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <a href="#">
+                            <button type="button" class="btn btn--red mt-6">View Collections</button>
+                        </a>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-4 border-light-grey border border-solid rounded-2xl">
+            <div class="explore-collection__card relative h-full flex flex-col">
+                <img src="assets/images/discover-nft/explore-collection/otherdeed.png" alt="">
+                <!-- <div class="explore-collection__card-info p-6"> -->
+                    <div class="flex justify-between mb-4 px-6 pt-4">  
+                        <img class="border-white border-3 rounded-lg border-solid w-24 h-24 -mt-16" src="assets/images/discover-nft/explore-collection/other-avatar.png" alt="ekta-nft" />
+                        <button class="flex gap-x-2 bg-pale-white items-center rounded-full border-solid text-black text-base fw-regular px-4 py-1">
+                            <span class="fw-regular text-black text-xs hidden lg:block">Floor Price</span>  
+                            <img src="assets/images/discover-nft/explore-collection/ekta-coin.svg" class="w-5 h-5 border-solid rounded-md border-2 border-white" alt=""> 
+                            <span class="text-black text-xs fw-medium">15.3 EKTA</span>
+                        </button>
+                        <img src="assets/images/discover-nft/explore-collection/menu.svg" class="" alt="">
+                    </div>
+                    <h4 class="card__title line-clamp-1 px-6">Otherdeed for Otherside</h4>
+                    <div class="flex flex-wrap gap-x-2 items-center px-6">
+                        <p class="fw-medium text-black text-base">Game</p> | <p class="text-black text-base line-clamp-2">by <span class="text-green fw-medium">OthersideMeta</span> </p>
+                    </div>
+                    <p class="text-black text-base fw-regular line-clamp-2 my-4 px-6">Otherdeed is the key to claiming land in Otherside.
+                        Each have a unique blend of environment and ...</p>
+                    <div class="flex space-x-4 items-center px-6">
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/id.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">ID</span> </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/collectables.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Collectables</span>  </button>
+                        </div>
+                    </div>
+                    <div class="mt-auto px-6 pb-6">
+                        <a href="#">
+                            <button type="button" class="btn btn--red mt-6">View Collections</button>
+                        </a>
+                    </div>
+                    
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-4 border-light-grey border border-solid rounded-2xl">
+            <div class="explore-collection__card relative h-full flex flex-col">
+                <img src="assets/images/discover-nft/explore-collection/crypto-unicorns.png" alt="">
+                <!-- <div class="explore-collection__card-info p-6"> -->
+                    <div class="flex justify-between mb-4 px-6 pt-6">  
+                        <img class="border-white border-3 rounded-lg border-solid w-24 h-24 -mt-16" src="assets/images/discover-nft/explore-collection/crypto-avatar.png" alt="ekta-nft" />
+                        <button class="flex gap-x-2 bg-pale-white items-center rounded-full border-solid text-black text-base fw-regular px-4 py-1">
+                            <span class="fw-regular text-black text-xs hidden lg:block">Floor Price</span>  
+                            <img src="assets/images/discover-nft/explore-collection/ekta-coin.svg" class="w-5 h-5 border-solid rounded-md border-2 border-white" alt=""> 
+                            <span class="text-black text-xs fw-medium">15.3 EKTA</span>
+                        </button>
+                        <img src="assets/images/discover-nft/explore-collection/menu.svg" class="" alt="">
+                    </div>
+                    <h4 class="card__title line-clamp-1 px-6">Crypto Unicorns La....</h4>
+                    <div class="flex flex-wrap gap-x-2 items-center px-6">
+                        <p class="fw-medium text-black text-base">Real Estate </p> | <p class="text-black text-base line-clamp-2">by <span class="text-green fw-medium"> LagunaGames</span> </p>
+                    </div>
+                    <p class="text-black text-base fw-regular line-clamp-2 my-4 px-6">Crypto Unicorns is a Digital Pet Collecting and
+                        Farming Game built on the blockchain....</p>
+                    <div class="flex flex-wrap gap-4 items-center px-6">
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/community.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Community</span> </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/reward.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Reward</span>  </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/utility.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Utility</span>  </button>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <a href="#">
+                            <button type="button" class="btn btn--red mt-6">View Collections</button>
+                        </a>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-4 border-light-grey border border-solid rounded-2xl">
+            <div class="explore-collection__card relative h-full flex flex-col">
+                <img src="assets/images/discover-nft/explore-collection/tamaki.png" alt="">
+                <!-- <div class="explore-collection__card-info p-6"> -->
+                    <div class="flex justify-between mb-4 px-6 pt-6">  
+                        <img class="border-white border-3 rounded-lg border-solid w-24 h-24 -mt-16" src="assets/images/discover-nft/explore-collection/tamaki-avatar.png" alt="ekta-nft" />
+                        <button class="flex gap-x-2 bg-pale-white items-center rounded-full border-solid text-black text-base fw-regular px-4 py-1">
+                            <span class="fw-regular text-black text-xs hidden lg:block">Floor Price</span>  
+                            <img src="assets/images/discover-nft/explore-collection/ekta-coin.svg" class="w-5 h-5 border-solid rounded-md border-2 border-white" alt=""> 
+                            <span class="text-black text-xs fw-medium">15.3 EKTA</span>
+                        </button>
+                        <img src="assets/images/discover-nft/explore-collection/menu.svg" class="" alt="">
+                    </div>
+                    <h4 class="card__title line-clamp-1 px-6">Tamaki Apes</h4>
+                    <div class="flex flex-wrap gap-x-2 items-center px-6">
+                        <p class="fw-medium text-black text-base">Art </p> | <p class="text-black text-base line-clamp-2">by <span class="text-green fw-medium"> TamakiApesOfficial </span> </p>
+                    </div>
+                    <p class="text-black text-base fw-regular line-clamp-2 my-4 px-6">The underbelly of Web3. A shadow vague, formless,
+                        but eternal.</p>
+                    <div class="flex flex-wrap gap-4 items-center px-6">
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/collectables.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Collectables</span> </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/asset.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Asset</span>  </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/community.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Community</span>  </button>
+                        </div>
+                    </div>
+                    <div class="mt-auto px-6 pb-6">
+                        <a href="#">
+                            <button type="button" class="btn btn--red mt-6">View Collections</button>
+                        </a>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-4 border-light-grey border border-solid rounded-2xl">
+            <div class="explore-collection__card relative h-full flex flex-col">
+                <img src="assets/images/discover-nft/explore-collection/akutars.png" alt="">
+                <!-- <div class="explore-collection__card-info p-6"> -->
+                    <div class="flex justify-between mb-4 pt-6 px-6">  
+                        <img class="border-white border-3 rounded-lg border-solid w-24 h-24 -mt-16" src="assets/images/discover-nft/explore-collection/akutars-avatar.png" alt="ekta-nft" />
+                        <button class="flex gap-x-2 bg-pale-white items-center rounded-full border-solid text-black text-base fw-regular px-4 py-1">
+                            <span class="fw-regular text-black text-xs hidden lg:block">Floor Price</span>  
+                            <img src="assets/images/discover-nft/explore-collection/ekta-coin.svg" class="w-5 h-5 border-solid rounded-md border-2 border-white" alt=""> 
+                            <span class="text-black text-xs fw-medium">15.3 EKTA</span>
+                        </button>
+                        <img src="assets/images/discover-nft/explore-collection/menu.svg" class="" alt="">
+                    </div>
+                    <h4 class="card__title line-clamp-1 px-6">Akutars</h4>
+                    <div class="flex flex-wrap gap-x-2 items-center px-6">
+                        <p class="fw-medium text-black text-base">Game </p> | <p class="text-black text-base line-clamp-2">by <span class="text-green fw-medium"> AkuDreams </span> </p>
+                    </div>
+                    <p class="text-black text-base fw-regular line-clamp-2 my-4 px-6">The underbelly of Web3. A shadow vague, formless,
+                        but eternal.</p>
+                    <div class="flex flex-wrap gap-4 items-center px-6">
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/reward.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Reward</span> </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/asset.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Asset</span>  </button>
+                        </div>
+                       
+                    </div>
+                    <div class="pb-6 px-6 mt-auto">
+                        <a href="#">
+                            <button type="button" class="btn btn--red mt-6">View Collections</button>
+                        </a>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-4 border-light-grey border border-solid rounded-2xl">
+            <div class="explore-collection__card relative h-full flex flex-col">
+                <img src="assets/images/discover-nft/explore-collection/wom.png" alt="">
+                <!-- <div class="explore-collection__card-info p-6"> -->
+                    <div class="flex justify-between mb-4 px-6 pt-6">  
+                        <img class="border-white border-3 rounded-lg border-solid w-24 h-24 -mt-16" src="assets/images/discover-nft/explore-collection/wow-avatar.png" alt="ekta-nft" />
+                        <button class="flex gap-x-2 bg-pale-white items-center rounded-full border-solid text-black text-base fw-regular px-4 py-1">
+                            <span class="fw-regular text-black text-xs hidden lg:block">Floor Price</span>  
+                            <img src="assets/images/discover-nft/explore-collection/ekta-coin.svg" class="w-5 h-5 border-solid rounded-md border-2 border-white" alt=""> 
+                            <span class="text-black text-xs fw-medium">15.3 EKTA</span>
+                        </button>
+                        <img src="assets/images/discover-nft/explore-collection/menu.svg" class="" alt="">
+                    </div>
+                    <h4 class="card__title line-clamp-1 px-6">World of Women</h4>
+                    <div class="flex flex-wrap gap-x-2 items-center px-6">
+                        <p class="fw-medium text-black text-base">Photography </p> | <p class="text-black text-base line-clamp-2">by <span class="text-green fw-medium"> WorldofWomen </span> </p>
+                    </div>
+                    <p class="text-black text-base fw-regular line-clamp-2 my-4 px-6">Community celebrating representation, inclusivity,
+                        and equal opportunities for all...</p>
+                    <div class="flex flex-wrap gap-4 items-center px-6">
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/community.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Community</span> </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/reward.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Reward</span>  </button>
+                        </div>
+                       
+                    </div>
+                    
+                    <a href="#">
+                        <button type="button" class="btn btn--red mt-6">View Collections</button>
+                    </a>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-4 border-light-grey border border-solid rounded-2xl">
+            <div class="explore-collection__card relative h-full flex flex-col">
+                <img src="assets/images/discover-nft/explore-collection/smoke-head.png" alt="">
+                <!-- <div class="explore-collection__card-info p-6"> -->
+                    <div class="flex justify-between mb-4 pt-6 px-6">  
+                        <img class="border-white border-3 rounded-lg border-solid w-24 h-24 -mt-16" src="assets/images/discover-nft/explore-collection/smoke-avatar.png" alt="ekta-nft" />
+                        <button class="flex gap-x-2 bg-pale-white items-center rounded-full border-solid text-black text-base fw-regular px-4 py-1">
+                            <span class="fw-regular text-black text-xs hidden lg:block">Floor Price</span>  
+                            <img src="assets/images/discover-nft/explore-collection/ekta-coin.svg" class="w-5 h-5 border-solid rounded-md border-2 border-white" alt=""> 
+                            <span class="text-black text-xs fw-medium">15.3 EKTA</span>
+                        </button>
+                        <img src="assets/images/discover-nft/explore-collection/menu.svg" class="" alt="">
+                    </div>
+                    <h4 class="card__title line-clamp-1 px-6">Smoke Heads</h4>
+                    <div class="flex flex-wrap gap-x-2 items-center px-6">
+                        <p class="fw-medium text-black text-base">Art  </p> | <p class="text-black text-base line-clamp-2">by <span class="text-green fw-medium"> Smoke_Heads </span> </p>
+                    </div>
+                    <p class="text-black text-base fw-regular line-clamp-2 my-4 px-6">A deflationary gang of 4420 Smoke Heads in route
+                        to become 1473 Enlightened Legendaries…</p>
+                    <div class="flex flex-wrap gap-4 items-center px-6">
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/asset.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Asset</span> </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/utility.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Utility</span>  </button>
+                        </div>
+                       
+                    </div>
+                    <div class="mt-auto px-6 pb-6">
+                        <a href="#">
+                            <button type="button" class="btn btn--red mt-6">View Collections</button>
+                        </a>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-4 border-light-grey border border-solid rounded-2xl">
+            <div class="explore-collection__card relative h-full flex flex-col">
+                <img src="assets/images/discover-nft/explore-collection/coc.png" alt="">
+                <!-- <div class="explore-collection__card-info p-6"> -->
+                    <div class="flex justify-between mb-4 px-6 pt-6">  
+                        <img class="border-white border-3 rounded-lg border-solid w-24 h-24 -mt-16" src="assets/images/discover-nft/explore-collection/coc-avatar.png" alt="ekta-nft" />
+                        <button class="flex gap-x-2 bg-pale-white items-center rounded-full border-solid text-black text-base fw-regular px-4 py-1">
+                            <span class="fw-regular text-black text-xs hidden lg:block">Floor Price</span>  
+                            <img src="assets/images/discover-nft/explore-collection/ekta-coin.svg" class="w-5 h-5 border-solid rounded-md border-2 border-white" alt=""> 
+                            <span class="text-black text-xs fw-medium">15.3 EKTA</span>
+                        </button>
+                        <img src="assets/images/discover-nft/explore-collection/menu.svg" class="" alt="">
+                    </div>
+                    <h4 class="card__title line-clamp-1 px-6">Cets on Creck</h4>
+                    <div class="flex flex-wrap gap-x-2 items-center px-6">
+                        <p class="fw-medium text-black text-base">Sports </p> | <p class="text-black text-base line-clamp-2">by <span class="text-green fw-medium"> CetsOnCreck </span> </p>
+                    </div>
+                    <p class="text-black text-base fw-regular line-clamp-2 my-4 px-6">It’s just a bunch of crecked cets, who’re up to a
+                        whole lot of rat shit that are livin’, and chillin’....</p>
+                    <div class="flex flex-wrap gap-4 items-center px-6">
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/id.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Id</span> </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/collectables.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Collectables</span>  </button>
+                        </div>
+                       
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <a href="#">
+                            <button type="button" class="btn btn--red mt-6">View Collections</button>
+                        </a>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-4 border-light-grey border border-solid rounded-2xl">
+            <div class="explore-collection__card relative h-full flex flex-col">
+                <img src="assets/images/discover-nft/explore-collection/ten-ktf.png" alt="">
+                <!-- <div class="explore-collection__card-info p-6"> -->
+                    <div class="flex justify-between mb-4 pt-6 px-6">  
+                        <img class="border-white border-3 rounded-lg border-solid w-24 h-24 -mt-16" src="assets/images/discover-nft/explore-collection/ten-avatar.png" alt="ekta-nft" />
+                        <button class="flex gap-x-2 bg-pale-white items-center rounded-full border-solid text-black text-base fw-regular px-4 py-1">
+                            <span class="fw-regular text-black text-xs hidden lg:block">Floor Price</span>  
+                            <img src="assets/images/discover-nft/explore-collection/ekta-coin.svg" class="w-5 h-5 border-solid rounded-md border-2 border-white" alt=""> 
+                            <span class="text-black text-xs fw-medium">15.3 EKTA</span>
+                        </button>
+                        <img src="assets/images/discover-nft/explore-collection/menu.svg" class="" alt="">
+                    </div>
+                    <h4 class="card__title line-clamp-1 px-6">10KTF Stockroom</h4>
+                    <div class="flex flex-wrap gap-x-2 items-center px-6">
+                        <p class="fw-medium text-black text-base">Business  </p> | <p class="text-black text-base line-clamp-2">by <span class="text-green fw-medium"> WagmiSan </span> </p>
+                    </div>
+                    <p class="text-black text-base fw-regular line-clamp-2 my-4 px-6">10KTF Stockroom is a collection of the finest Tools
+                        and Materials held by the esteemed10KTF....</p>
+                    <div class="flex flex-wrap gap-4 items-center px-6">
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/community.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Community</span> </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/reward.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Reward</span>  </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/utility.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Utility</span>  </button>
+                        </div>
+                       
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <a href="#">
+                            <button type="button" class="btn btn--red mt-6">View Collections</button>
+                        </a>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-4 border-light-grey border border-solid rounded-2xl">
+            <div class="explore-collection__card relative h-full flex flex-col">
+                <img src="assets/images/discover-nft/explore-collection/kumaverse.png" alt="">
+                <!-- <div class="explore-collection__card-info p-6"> -->
+                    <div class="flex justify-between mb-4 pt-4 px-6">  
+                        <img class="border-white border-3 rounded-lg border-solid w-24 h-24 -mt-16" src="assets/images/discover-nft/explore-collection/kumaverse-avatar.png" alt="ekta-nft" />
+                        <button class="flex gap-x-2 bg-pale-white items-center rounded-full border-solid text-black text-base fw-regular px-4 py-1">
+                            <span class="fw-regular text-black text-xs hidden lg:block">Floor Price</span>  
+                            <img src="assets/images/discover-nft/explore-collection/ekta-coin.svg" class="w-5 h-5 border-solid rounded-md border-2 border-white" alt=""> 
+                            <span class="text-black text-xs fw-medium">15.3 EKTA</span>
+                        </button>
+                        <img src="assets/images/discover-nft/explore-collection/menu.svg" class="" alt="">
+                    </div>
+                    <h4 class="card__title line-clamp-1 px-6">Kumaverse Genesis</h4>
+                    <div class="flex flex-wrap gap-x-2 items-center px-6">
+                        <p class="fw-medium text-black text-base">Art   </p> | <p class="text-black text-base line-clamp-2">by <span class="text-green fw-medium"> KumaverseOfficial </span> </p>
+                    </div>
+                    <p class="text-black text-base fw-regular line-clamp-2 my-4 px-6">Kumaverse is an alternate universe of dystopian
+                        Earth where humans live side-by-side with...</p>
+                    <div class="flex flex-wrap gap-4 items-center px-6">
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/collectables.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Collectables</span> </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/asset.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Asset</span>  </button>
+                        </div>
+                       
+                       
+                    </div>
+                    <div class="px-6 pb-6 mt-auto">
+                        <a href="#">
+                            <button type="button" class="btn btn--red mt-6">View Collections</button>
+                        </a>
+                    </div>
+                    
+                <!-- </div> -->
+            </div>
+        </div>
+
+        <div class="col-span-12 sm:col-span-6 lg:col-span-4 border-light-grey border border-solid rounded-2xl">
+            <div class="explore-collection__card relative h-full flex flex-col">
+                <img src="assets/images/discover-nft/explore-collection/toonz.png" alt="">
+                <!-- <div class="explore-collection__card-info p-6"> -->
+                    <div class="flex justify-between mb-4 px-6 pt-6">  
+                        <img class="border-white border-3 rounded-lg border-solid w-24 h-24 -mt-16" src="assets/images/discover-nft/explore-collection/toonz-avatar.png" alt="ekta-nft" />
+                        <button class="flex gap-x-2 bg-pale-white items-center rounded-full border-solid text-black text-base fw-regular px-4 py-1">
+                            <span class="fw-regular text-black text-xs hidden lg:block">Floor Price</span>  
+                            <img src="assets/images/discover-nft/explore-collection/ekta-coin.svg" class="w-5 h-5 border-solid rounded-md border-2 border-white" alt=""> 
+                            <span class="text-black text-xs fw-medium">15.3 EKTA</span>
+                        </button>
+                        <img src="assets/images/discover-nft/explore-collection/menu.svg" class="" alt="">
+                    </div>
+                    <h4 class="card__title line-clamp-1 px-6">TOONZDEPLOYER</h4>
+                    <div class="flex flex-wrap gap-x-2 items-center px-6">
+                        <p class="fw-medium text-black text-base">Game  </p> | <p class="text-black text-base line-clamp-2">by <span class="text-green fw-medium"> TOONZDEPLOYER </span> </p>
+                    </div>
+                    <p class="text-black text-base fw-regular line-clamp-2 my-4 px-6">8888 degenerate TOONZ that double as a
+                        membership to an exclusive metaverse....</p>
+                    <div class="flex flex-wrap gap-4 items-center px-6">
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/reward.svg" class="w-4 h-4" alt=""> <span class="hidden lg:block">Reward</span> </button>
+                        </div>
+                        <div>
+                            <button class="flex gap-x-4 items-center rounded-full bg-pale-white text-black text-base fw-regular px-5 py-2">
+                            <img src="assets/images/discover-nft/explore-collection/asset.svg" class="w-4 h-4" alt="">  <span class="hidden lg:block">Asset</span>  </button>
+                        </div>
+                       
+                       
+                    </div>
+                    <div class="pb-6 px-6 mt-auto">
+                        <a href="#">
+                            <button type="button" class="btn btn--red mt-6">View Collections</button>
+                        </a>
+                    </div>
+                <!-- </div> -->
+            </div>
+        </div>
+        
+        <img class="float-right absolute hidden lg:block right-0 mt-80 -z-1" width="100" height="100%" src="assets/images/discover-nft/explore-collection/triangle-right.png" alt="">
+    </div>
+</div>

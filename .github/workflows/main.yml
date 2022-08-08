@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+    - test
+
+jobs:
+  build:
+    # using Ubuntu
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1 #this installs node and npm for us
+        with:
+          node-version: "12.x"
+
+      - uses: actions/cache@v1 # this allows for re-using node_modules caching, making builds a bit faster.
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - run: npm install
+      - run: npm install -g @angular/cli > /dev/null
+      - run: ng build
+
+      - name: Deploy to my EC2 instance
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SOURCE: "./dist/ektanft/*"
+          REMOTE_HOST: ${{ secrets.SSH_KNOWN_HOSTS }}
+          REMOTE_USER: ${{ secrets.SSH_USERNAME }}
+          TARGET: "/var/www/html/test"
+

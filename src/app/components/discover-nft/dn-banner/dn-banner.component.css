@@ -1,0 +1,9 @@
+.ng-image-slider .ng-image-slider-max-w-7xl .main .main-inner .img-div {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    border-radius: 0 !important;
+}
+.img-div.image-popup {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}

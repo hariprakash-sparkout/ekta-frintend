@@ -1,0 +1,106 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<nav>
+    <div class="mx-auto px-2 sm:px-6 lg:px-24">
+      <div class="relative flex items-center justify-between h-20">
+        <div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
+          <!-- Mobile menu button-->
+          <button (click)="toggleNavbar()" type="button" class="inline-flex items-center justify-center p-2 rounded-md" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Heroicon name: outline/menu
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fff" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Heroicon name: outline/x
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#fff" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-1 flex items-center ml-12 lg:ml-0 justify-start">
+          <div class="flex-shrink-0 flex items-center">
+            <a routerLink="/home">
+              <img class="block lg:hidden h-8 w-auto" src="assets/images/logo.svg" alt="ekta-nft">
+              <img class="hidden lg:block" width="150" src="assets/images/logo.svg" alt="ekta-nft">
+            </a>
+          </div>
+          <div class="hidden lg:block sm:ml-6 lg:ml-20">
+            <div class="flex space-x-8">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a routerLink="/discover-nft" routerLinkActive="text-primary border-b border-solid border-primary" class="py-2 text-sm text-white fw-medium hover:text-primary hover:border-b hover:border-solid hoverborder-primary" aria-current="page">Discover NFT</a>
+              <a routerLink="/swap" routerLinkActive="bg-gray-900 text-white" class="py-2 text-sm text-white fw-medium hover:text-primary hover:border-b hover:border-solid hoverborder-primary">Learn</a>
+              <a href="#" class="py-2 text-sm text-white fw-medium">Community</a>
+              <a href="#" class="py-2 text-sm text-white fw-medium">Buzz</a>
+              <a href="#" class="py-2 text-sm text-white fw-medium">About</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center gap-x-8 pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <!-- <button type="button" class="hidden lg:flex  p-1 rounded-full text-white">
+            <p class="text-base text-white fw-medium">Login | Signup</p>
+          </button> -->
+  
+          <!-- Profile dropdown -->
+          <!-- <div class="ml-3 relative">
+            <div>
+              <button (click)="toggleProfileDrodown()" type="button" class="bg-primary py-2 px-6 fw-bold text-white text-sm rounded-full" aria-expanded="false" aria-haspopup="true">
+               NFT Marketplace
+              </button>
+            </div>
+
+            <div [ngClass]="{'hidden': !showMenu, 'block': showMenu}" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+            </div>
+          </div> -->
+          <button type="button" class="btn btn--red py-2 px-6 fw-bold text-white text-sm rounded-full" aria-expanded="false" aria-haspopup="true">
+            Buy Ekta
+           </button>
+  
+           <button type="button" class="btn btn--mint text-green py-2 px-6 fw-bold text-white text-sm rounded-full" aria-expanded="false" aria-haspopup="true">
+            Connect Wallet
+           </button>
+        </div>
+        <!-- <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-4">
+          <button type="button" class="btn btn--red py-2 px-6 fw-bold text-white text-sm rounded-full" aria-expanded="false" aria-haspopup="true">
+            Buy Ekta
+           </button>
+  
+           <button type="button" class="btn btn--mint text-green py-2 px-6 fw-bold text-white text-sm rounded-full" aria-expanded="false" aria-haspopup="true">
+            Connect Wallet
+           </button>
+        </div> -->
+      </div>
+    </div>
+  
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="lg:hidden bg-mobile-nav" id="mobile-menu" [ngClass]="{'hidden': !showMobileMenu, 'block': showMobileMenu}">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="bg-primary text-white block px-3 py-2 rounded-md text-base fw-medium" aria-current="page">Discover NFT</a>
+  
+        <a href="#" class="text-white hover:bg-primary hover:text-white block px-3 py-2 rounded-md text-base fw-medium">Learn</a>
+  
+        <a href="#" class="text-white hover:bg-primary hover:text-white block px-3 py-2 rounded-md text-base fw-medium">Community</a>
+  
+        <a href="#" class="text-white hover:bg-primary hover:text-white block px-3 py-2 rounded-md text-base fw-medium">Buzz</a>
+        <a href="#" class="text-white hover:bg-primary hover:text-white block px-3 py-2 rounded-md text-base fw-medium">About</a>
+        <a href="#" class="block lg:hidden">
+          <p class="text-white hover:bg-primary hover:text-white block px-3 py-2 rounded-md text-base fw-medium">Login | Signup</p>
+        </a>
+      </div>
+    </div>
+  </nav>
+  
